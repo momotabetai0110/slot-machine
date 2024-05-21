@@ -95,7 +95,7 @@ button:disabled {
     border: none;
     height: 80px;
     width: 80px;
-    margin: 30px;
+    margin: 20px;
     font-size: 15px;
     border-radius: 10px;
     cursor: pointer;
@@ -109,7 +109,7 @@ button:disabled {
     border: none;
     height: 80px;
     width: 80px;
-    margin: 30px;
+    margin: 20px;
     font-size: 15px;
     border-radius: 10px;
     cursor: pointer;
