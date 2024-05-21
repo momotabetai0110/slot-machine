@@ -54,10 +54,6 @@ button {
     align-items: center;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
 button:disabled {
     background-color: #6c757d;
     cursor: not-allowed;
@@ -68,6 +64,7 @@ button:disabled {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    justify-content: center;
 }
 
 .slot {
@@ -81,6 +78,7 @@ button:disabled {
     border-radius: 10px;
     border: 5px solid #81a7f9;
     align-items: center;
+    justify-content: center;
 
 }
 
@@ -89,4 +87,32 @@ button:disabled {
     max-width: 100vw; /* ビューポートの幅に合わせる */
     height: auto; /* アスペクト比を維持 */
     display: block; /* 画像の下の余白を除去 */
+}
+
+#reset{
+    background-color: #272727;
+    color: white;
+    border: none;
+    height: 80px;
+    width: 80px;
+    margin: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-items: center;
+}
+
+#help{
+    background-color: #272727;
+    color: white;
+    border: none;
+    height: 80px;
+    width: 80px;
+    margin: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-items: center;
 }
