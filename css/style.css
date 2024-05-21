@@ -96,7 +96,7 @@ button:disabled {
     height: 80px;
     width: 80px;
     margin: 10px;
-    font-size: 15px;
+    font-size: 10px;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
