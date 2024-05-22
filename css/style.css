@@ -9,12 +9,6 @@ body {
     margin: 0;
 }
 
-header {
-    text-align: center;
-    background-color: rgb(248, 249, 227);
-    height: 200px;
-}
-
 h1 {
     margin-top: 30px;
     font-size: 36px;
@@ -24,7 +18,19 @@ h1 {
 #result {
     font-size: 24px;
     font-weight: bold;
-    margin-top: 60px;
+    margin-top: 30px;
+}
+
+#result_img {
+    width: 100%; /* 親要素の幅に合わせる */
+    height: auto; /* 高さは自動調整 */
+    overflow: hidden; /* 必要に応じて溢れる部分を隠す */
+}
+
+#result_img img {
+    width: 100%; /* 画像の幅を親要素の幅に合わせる */
+    height: auto; /* 高さを自動調整 */
+    object-fit: contain; /* 画像のアスペクト比を維持しながら収まる */
 }
 
 main {
@@ -33,12 +39,10 @@ main {
     align-items: center;
     background-color: #d1dbe6;
     height: 500px;
-    justify-content: center;
+
 }
 
-.buttons {
-    margin-top: 50px;
-}
+
 
 button {
     background-color: #f3ad5d;
@@ -66,6 +70,7 @@ button:disabled {
     align-items: center;
     gap: 30px;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .slot {
@@ -96,12 +101,12 @@ button:disabled {
     border: none;
     height: 80px;
     width: 80px;
-    margin: 10px;
-    font-size: 10px;
+    font-size: 15px;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
     align-items: center;
+    text-align: center;
 }
 
 #help{
@@ -116,4 +121,5 @@ button:disabled {
     cursor: pointer;
     transition: background-color 0.3s;
     align-items: center;
+    text-align: center;
 }

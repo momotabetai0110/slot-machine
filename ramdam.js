@@ -18,8 +18,10 @@ function slot_limit_chk(){
         //江戸っ子が完成しているかチェック
         if (JSON.stringify(slot_array) === JSON.stringify(slot_result_array)) {
             result = ('江戸っ子!!!!!')
+            result_img_path = '<img src="img/江戸っ子.jpg" alt="江戸っ子ガチャ"></img>'
         }else{
             result = ('江戸っ子失敗')
+            result_img_path= '<img src="img/江戸っ子.jpg" alt="江戸っ子ガチャ"></img>'
         }
     //結果を表示
     view_result()
@@ -36,6 +38,8 @@ function slot_view(div_nm,i){
 function view_result(){
     var resultDiv = document.getElementById("result");
     resultDiv.innerHTML = result
+    var resultDiv = document.getElementById("result_img")
+    resultDiv.innerHTML = result_img_path
 }
 
 function reset(){
