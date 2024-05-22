@@ -20,8 +20,18 @@ function slot_limit_chk(){
             result = ('江戸っ子!!!!!')
             result_img_path = '<img src="img/江戸っ子.jpg" alt="江戸っ子ガチャ"></img>'
         }else{
+            false_num = Math.floor(Math.random() * (2 + 1))
+            console.log(false_num)
             result = ('江戸っ子失敗')
-            result_img_path= '<img src="img/江戸っ子.jpg" alt="江戸っ子ガチャ"></img>'
+            if(false_num = 0){
+                result_img_path ='<img src="img/失敗1.png" alt="江戸っ子ガチャ"></img>'
+            }else if(false_num = 1){
+                result_img_path ='<img src="img/失敗2.png" alt="江戸っ子ガチャ"></img>'
+            }else if(false_num = 2){
+                result_img_path ='<img src="img/失敗3.png" alt="江戸っ子ガチャ"></img>'
+            }
+            console.log(result_img_path)
+
         }
     //結果を表示
     view_result()
