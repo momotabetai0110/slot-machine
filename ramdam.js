@@ -52,6 +52,7 @@ function reset(){
     document.getElementById('2nd').textContent = "";
     document.getElementById('3rd').textContent = "";
     document.getElementById('result').textContent = "結果がここに表示されます";
+    document.getElementById('result_img').textContent = "";
 
 }
 
@@ -83,4 +84,10 @@ SLOT_STOP_EVENT_3.addEventListener('click', () => {
 const reset_event = document.getElementById('reset');
 reset_event.addEventListener('click', () => {
     reset()
+});
+
+//遊び方
+const help_event = document.getElementById('help');
+help_event.addEventListener('click', () => {
+    alert('【てやんでい バーロー ちきしょー】を揃えて江戸っ子を出現させよう！！！');
 });
