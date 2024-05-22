@@ -54,11 +54,9 @@ button {
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s;
-    align-items: center;
-    text-align: center;
-    justify-content: center; /* 水平方向の中央揃え */
-    align-items: center; /* 垂直方向の中央揃え */
-    text-align: center; /* テキストの中央揃え */
+    text-align: center; /* 水平方向の中央揃え */
+    line-height: 60px; /* 垂直方向の中央揃え */
+    padding-right: 10px;
 }
 
 button:disabled {
