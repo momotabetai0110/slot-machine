@@ -63,13 +63,13 @@ button:disabled {
     align-items: center;
     justify-content: center;/* フレックスの中を水平に中央に配置 */
     gap: 30px;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 #result {
     font-size: 24px;
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 #result_img {
@@ -96,7 +96,7 @@ footer{
     color: white;
     border: none;
     height: 60x;
-    width: 120px;
+    width: 180px;
     font-size: 15px;
     border-radius: 10px;
     cursor: pointer;
