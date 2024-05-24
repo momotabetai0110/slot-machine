@@ -1,0 +1,107 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.title-img img {
+    width: 100%;
+    max-width: 100vw; /* ビューポートの幅に合わせる */
+    height: auto; /* アスペクト比を維持 */
+    display: block; /* 画像の下の余白を除去 */
+}
+
+main {
+    display: flex;/* 要素をフレックスに指定 */
+    flex-direction: column;/* フレックスを縦に配置 */
+    align-items: center;/* フレックスの中を垂直に中央に配置 */
+    background-color: #d1dbe6;
+    height: 500px;
+}
+
+button {
+    background-color: #f3ad5d;
+    color: white;
+    border: none;
+    height: 60px;
+    width: 60px;
+    margin: 30px;
+    font-size: 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;/* テキストを水平に中央に配置 */
+    line-height: 60px;/* ボタンの高さと同じにすると、中央にテキストが来る */
+}
+
+button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.slot {
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    background-color: #f6f6f6;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 5px solid #81a7f9;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slot_value {
+    display: flex;
+    align-items: center;
+    justify-content: center;/* フレックスの中を水平に中央に配置 */
+    gap: 30px;
+    margin-top: 15px;
+}
+
+#result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#result_img {
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* 必要に応じて溢れる部分を隠す */
+}
+
+#result_img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* 画像のアスペクト比を維持しながら収まる */
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    background-color: #64717f;
+    justify-content: center;
+}
+
+#reset,#help,#score{
+    background-color: #272727;
+    color: white;
+    border: none;
+    height: 60x;
+    width: 120px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-items: center;
+    text-align: center;
+}
+
