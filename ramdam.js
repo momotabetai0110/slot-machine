@@ -1,41 +1,58 @@
-const slot_array = ['てやんでい','バーロー','ちきしょー'] //スロットの中身
+const SLOT_ARRAY = ['てやんでい','バーロー','ちきしょー'] //スロットの中身
 let slot_cnt = 0 //スロットの回数
 let slot_result_array = [] //獲得したスロットの値
 
 //スロットを止める
 function stop_slot(slot_num){
     ram_int = Math.floor(Math.random() * (2 + 1))
-    slot_result_array[slot_num] = slot_array[ram_int]
+    slot_result_array[slot_num] = SLOT_ARRAY[ram_int]
     ram_int = ram_int + 1
     console.log(slot_result_array)
     slot_cnt = slot_cnt + 1
 }
 
-//スロットの回数チェック
+//スロットの結果を表示
 function slot_limit_chk(){
     //スロットをすべて回していた場合実行
     if (slot_cnt === 3){
-        //江戸っ子が完成しているかチェック
-        if (JSON.stringify(slot_array) === JSON.stringify(slot_result_array)) {
+        //江戸っ子が完成している場合
+        if (JSON.stringify(SLOT_ARRAY) === JSON.stringify(slot_result_array)) {
+            console.log("せいこう")
             result = ('江戸っ子!!!!!')
             result_img_path = '<img src="img/江戸っ子.jpg" alt="江戸っ子ガチャ"></img>'
+
+        //同じ単語が揃っている場合
+        }else if(slot_result_array[0] === slot_result_array[1] && slot_result_array[0]=== slot_result_array[2]){
+                result = ('江戸っ子？')
+                console.log("おしい")
+                false_num = Math.floor(Math.random() * (2 + 1))
+                if(false_num === 0){
+                    result_img_path ='<img src="img/おしい1.png" alt="江戸っ子ガチャ"></img>'
+                    }else if(false_num === 1){
+                        result_img_path ='<img src="img/おしい2.jpg" alt="江戸っ子ガチャ"></img>'
+                    }else if(false_num === 2){
+                        result_img_path ='<img src="img/おしい3.png" alt="江戸っ子ガチャ"></img>'
+                    }
+
+        //はずれの場合
         }else{
             false_num = Math.floor(Math.random() * (2 + 1))
             console.log(false_num)
             result = ('江戸っ子失敗')
-            if(false_num = 0){
+                //ランダムで失敗画像を表示
+             if(false_num === 0){
                 result_img_path ='<img src="img/失敗1.png" alt="江戸っ子ガチャ"></img>'
-            }else if(false_num = 1){
-                result_img_path ='<img src="img/失敗2.png" alt="江戸っ子ガチャ"></img>'
-            }else if(false_num = 2){
-                result_img_path ='<img src="img/失敗3.png" alt="江戸っ子ガチャ"></img>'
-            }
-            console.log(result_img_path)
+                }else if(false_num === 1){
+                    result_img_path ='<img src="img/失敗2.png" alt="江戸っ子ガチャ"></img>'
+                }else if(false_num === 2){
+                    result_img_path ='<img src="img/失敗3.png" alt="江戸っ子ガチャ"></img>'
+                }
 
-        }
+    }
     //結果を表示
     view_result()
     }
+
 }
 
 //スロットの値をそれぞれ表示
@@ -52,6 +69,7 @@ function view_result(){
     resultDiv.innerHTML = result_img_path
 }
 
+//リセット機能
 function reset(){
     slot_cnt = 0
     slot_result_array = []
