@@ -1,4 +1,3 @@
-/* css/style.css */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
@@ -9,39 +8,20 @@ body {
     margin: 0;
 }
 
-h1 {
-    margin-top: 30px;
-    font-size: 36px;
-    color: #000000;
-}
-
-#result {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 30px;
-}
-
-#result_img {
-    width: 100%; /* 親要素の幅に合わせる */
-    height: auto; /* 高さは自動調整 */
-    overflow: hidden; /* 必要に応じて溢れる部分を隠す */
-}
-
-#result_img img {
-    width: 100%; /* 画像の幅を親要素の幅に合わせる */
-    height: auto; /* 高さを自動調整 */
-    object-fit: contain; /* 画像のアスペクト比を維持しながら収まる */
+.title-img img {
+    width: 100%;
+    max-width: 100vw; /* ビューポートの幅に合わせる */
+    height: auto; /* アスペクト比を維持 */
+    display: block; /* 画像の下の余白を除去 */
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex;/* 要素をフレックスに指定 */
+    flex-direction: column;/* フレックスを縦に配置 */
+    align-items: center;/* フレックスの中を垂直に中央に配置 */
     background-color: #d1dbe6;
     height: 500px;
 }
-
-
 
 button {
     background-color: #f3ad5d;
@@ -54,23 +34,13 @@ button {
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s;
-    text-align: center; /* 水平方向の中央揃え */
-    line-height: 60px; /* 垂直方向の中央揃え */
-    padding-right: 10px;
+    text-align: center;/* テキストを水平に中央に配置 */
+    line-height: 60px;/* ボタンの高さと同じにすると、中央にテキストが来る */
 }
 
 button:disabled {
     background-color: #6c757d;
     cursor: not-allowed;
-}
-
-.slot_value {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    justify-content: center;
-    margin-top: 30px;
 }
 
 .slot {
@@ -88,14 +58,40 @@ button:disabled {
 
 }
 
-.title-img img {
-    width: 100%;
-    max-width: 100vw; /* ビューポートの幅に合わせる */
-    height: auto; /* アスペクト比を維持 */
-    display: block; /* 画像の下の余白を除去 */
+.slot_value {
+    display: flex;
+    align-items: center;
+    justify-content: center;/* フレックスの中を水平に中央に配置 */
+    gap: 30px;
+    margin-top: 30px;
 }
 
-#reset{
+#result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#result_img {
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* 必要に応じて溢れる部分を隠す */
+}
+
+#result_img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* 画像のアスペクト比を維持しながら収まる */
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    background-color: #64717f;
+    justify-content: center;
+}
+
+#reset,#help,#score{
     background-color: #272727;
     color: white;
     border: none;
@@ -109,23 +105,3 @@ button:disabled {
     text-align: center;
 }
 
-#help{
-    background-color: #272727;
-    color: white;
-    border: none;
-    height: 60px;
-    width: 100px;
-    margin: 10px;
-    font-size: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    align-items: center;
-    text-align: center;
-}
-
-footer{
-    display: flex;
-    align-items: center;
-    background-color: #64717f;
-}
