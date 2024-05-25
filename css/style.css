@@ -86,8 +86,8 @@ button:disabled {
 
 footer{
     display: flex;
-    align-items: center;
     background-color: #64717f;
+    align-items: center;
     justify-content: center;
 }
 
@@ -95,13 +95,13 @@ footer{
     background-color: #272727;
     color: white;
     border: none;
-    height: 60x;
-    width: 180px;
+    height: 60px;
+    width: 100px;
     font-size: 15px;
-    border-radius: 10px;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s;
-    align-items: center;
     text-align: center;
+    margin: 10px;
 }
 
