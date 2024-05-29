@@ -109,7 +109,6 @@ footer{
 #title {
     text-align: center;
     font-size: 2em;
-    margin-bottom: 10px;
 }
 
 /* セクション全体のスタイル */
@@ -126,20 +125,21 @@ footer{
 /* 各カテゴリの見出し */
 .result-category h3 {
     font-size: 1.5em;
-    margin-bottom: 10px;
     text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 /* 画像を横に並べるためのコンテナ */
 .image-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* 画像の間隔 */
+    gap: 5px; /* 画像の間隔 */
 }
 
 /* 画像のスタイル */
 .image-container img {
-    max-width: 100px; /* 必要に応じてサイズ調整 */
+    max-width: 120px; /* 必要に応じてサイズ調整 */
     height: auto;
-    border: 5px solid #ffffff;
+    border: 3px solid #ffffff;
 }
