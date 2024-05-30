@@ -14,24 +14,55 @@
   </div>
 
   <main>
-    <div class="slot_value">
+
+    <h1 id="title">戦績</h1>
+    <section id="results">
+        <div class="result-category">
+            <h3>江戸っ子成功</h3>
+            <div class="image-container" >
+                <img id ="success" src="img/江戸っ子.jpg" alt="江戸っ子ガチャ" >
+            </div>
+        </div>
+        <div class="result-category">
+            <h3>江戸っ子？</h3>
+            <div class="image-container">
+                <img src="img/おしい1.png" alt="江戸っ子ガチャ">
+                <img src="img/おしい2.jpg" alt="江戸っ子ガチャ">
+                <img src="img/おしい3.png" alt="江戸っ子ガチャ">
+            </div>
+        </div>
+        <div class="result-category">
+            <h3>失敗</h3>
+            <div class="image-container">
+                <img src="img/失敗1.png" alt="江戸っ子ガチャ">
+                <img src="img/失敗2.png" alt="江戸っ子ガチャ">
+                <img src="img/失敗3.png" alt="江戸っ子ガチャ">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="slot_value" style="display: none;">
       <div id="1st" class="slot"></div>
       <div id="2nd" class="slot"></div>
       <div id="3rd" class="slot"></div>
     </div>
 
-    <div class="buttons">
+    <div class="buttons" style="display: none;">
       <button id="STOP1" onclick="disabled = true;">PUSH</button>
       <button id="STOP2" onclick="disabled = true;">PUSH</button>
       <button id="STOP3" onclick="disabled = true;">PUSH</button>
     </div>
-    <div id="result">結果がここに表示されます</div>
-    <div id="result_img"></div>
+    <div id="result" style="display: none;">結果がここに表示されます</div>
+    <div id="result_img" style="display: none;"></div>
   </main>
 
   <footer>
     <button id="help">遊び方</button>
-    <button id="score">戦績</button>
+    <button id="score" style="display: block;">戦績</button>
+    <button id="score2" style="display: none;">スロット</button>
     <button id="reset">リセット</button>
   </footer>
 
