@@ -9,30 +9,65 @@
 <body>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <div class="title-img">
-    <img src="img/タイトル.png" alt="江戸っ子ガチャ">
+  <div class="title_img">
+    <img src="img/タイトル.png" >
   </div>
 
   <main>
-    <div class="slot_value">
-      <div id="1st" class="slot"></div>
-      <div id="2nd" class="slot"></div>
-      <div id="3rd" class="slot"></div>
-    </div>
 
-    <div class="buttons">
-      <button id="STOP1" onclick="disabled = true;">PUSH</button>
-      <button id="STOP2" onclick="disabled = true;">PUSH</button>
-      <button id="STOP3" onclick="disabled = true;">PUSH</button>
-    </div>
-    <div id="result">結果がここに表示されます</div>
-    <div id="result_img"></div>
+    <h1 id="title" style="display: none;">戦績</h1>
+    <section id="score_view" style="display: none;">
+        <div class="result-category">
+            <h3>★江戸っ子成功★</h3>
+            <div class="image-container" >
+                <img id ="score_1" src="img/ロック.png"  >
+            </div>
+        </div>
+        <div class="result-category">
+            <h3>◇江戸っ子？◇</h3>
+            <div class="image-container">
+                <img id="score_2" src="img/ロック.png" >
+                <img id="score_3" src="img/ロック.png" >
+                <img id="score_4" src="img/ロック.png" >
+            </div>
+        </div>
+        <div class="result-category">
+            <h3>●江戸っ子失敗●</h3>
+            <div class="image-container">
+                <img id ="score_5" src="img/ロック.png" >
+                <img id ="score_6" src="img/ロック.png" >
+                <img id ="score_7" src="img/ロック.png" >
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id ="slot_view" style="display: block";>
+      <div class="slot_value" >
+        <div id="1st" class="slot"></div>
+        <div id="2nd" class="slot"></div>
+        <div id="3rd" class="slot"></div>
+      </div>
+      <div class="buttons" >
+        <button id="STOP1" onclick="disabled = true;">PUSH</button>
+        <button id="STOP2" onclick="disabled = true;">PUSH</button>
+        <button id="STOP3" onclick="disabled = true;">PUSH</button>
+      </div>
+    </section>
+<view id="result_view">
+      <div id="result_str" >結果がここに表示されます</div>
+      <img id="result_img" src = ""> </img>
+</view>
+
   </main>
 
   <footer>
-    <button id="help">遊び方</button>
-    <button id="score">戦績</button>
-    <button id="reset">リセット</button>
+
+      <button id="help">遊び方</button>
+      <button id="score" style="display: block;">戦績</button>
+      <button id="slot" style="display: none;">スロット</button>
+      <button id="reset">リセット</button>
   </footer>
 
   <script src="ramdam.js"></script>

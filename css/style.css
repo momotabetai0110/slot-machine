@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-.title-img img {
+.title_img img {
     width: 100%;
     max-width: 100vw; /* ビューポートの幅に合わせる */
     height: auto; /* アスペクト比を維持 */
@@ -66,13 +66,19 @@ button:disabled {
     margin-top: 30px;
 }
 
-#result {
+#result_str {
+    display: flex;
+    align-items: center;
+    justify-content: center;/* フレックスの中を水平に中央に配置 */
     font-size: 24px;
     font-weight: bold;
     margin-top: 0px;
 }
 
 #result_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;/* フレックスの中を水平に中央に配置 */
     width: 100%;
     height: auto;
     overflow: hidden; /* 必要に応じて溢れる部分を隠す */
@@ -91,7 +97,8 @@ footer{
     justify-content: center;
 }
 
-#reset,#help,#score{
+
+#reset,#help,#score,#slot{
     background-color: #272727;
     color: white;
     border: none;
@@ -105,3 +112,48 @@ footer{
     margin: 10px;
 }
 
+
+#title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom:10px ;
+    margin-top: 0px;
+}
+
+#score_view {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 各カテゴリのスタイル */
+.result-category{
+    margin-bottom: 20px;
+}
+
+/* 各カテゴリの見出し */
+.result-category h3 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* 画像を横に並べるためのコンテナ */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* 画像の間隔 */
+}
+
+/* 画像のスタイル */
+.image-container img {
+    max-width: 120px; /* 必要に応じてサイズ調整 */
+    height: auto;
+    border: 3px solid #ffffff;
+}
+
+#score_1{
+    max-width: 180px; /* 必要に応じてサイズ調整 */
+    height: auto;
+    border: 5px solid #fff692;
+}
