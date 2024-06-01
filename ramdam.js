@@ -72,7 +72,7 @@ function view_result(){
     var resultDiv = document.getElementById("result_str")
     resultDiv.innerHTML = result
     var resultDiv = document.getElementById("result_img")
-    resultDiv.setAttribute('src',result_img_path)
+    resultDiv.innerHTML = '<img src="' + result_img_path +'" ></img>;'
 }
 
 //戦績を更新する
@@ -97,7 +97,7 @@ function reset(){
     document.getElementById('2nd').textContent = "";
     document.getElementById('3rd').textContent = "";
     document.getElementById('result_str').textContent = "結果がここに表示されます";
-    document.getElementById('result_img').setAttribute('src','')
+    document.getElementById('result_img').textContent = ""
 
 }
 
