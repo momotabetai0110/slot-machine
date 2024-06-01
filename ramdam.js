@@ -97,7 +97,7 @@ function reset(){
     document.getElementById('2nd').textContent = "";
     document.getElementById('3rd').textContent = "";
     document.getElementById('result_str').textContent = "結果がここに表示されます";
-    document.getElementById('result_img').setAttribute('src',"")
+    document.getElementById('result_img').setAttribute('src','')
 
 }
 
